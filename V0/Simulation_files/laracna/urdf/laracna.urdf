@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="laracna">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.000549635703823248 0.000293483149070013 0.0112605913949021"
+        rpy="0 0 0" />
+      <mass
+        value="0.14927705759424" />
+      <inertia
+        ixx="0.000100027721214231"
+        ixy="2.4773581694314E-08"
+        ixz="3.58371478829819E-08"
+        iyy="0.000100884749929397"
+        iyz="-6.97057666183732E-10"
+        izz="0.000182270802115177" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://laracna/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://laracna/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="coxa_lt">
+    <inertial>
+      <origin
+        xyz="0.0311676418899575 -0.0171857800823059 -0.000875524395070736"
+        rpy="0 0 0" />
+      <mass
+        value="0.0168835876489626" />
+      <inertia
+        ixx="1.6952188219386E-06"
+        ixy="3.83287227161093E-09"
+        ixz="-1.68767618013711E-08"
+        iyy="1.48581490331589E-06"
+        iyz="2.67936341290949E-08"
+        izz="1.77877429034646E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://laracna/meshes/coxa_lt.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://laracna/meshes/coxa_lt.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="coxa_lt_j"
+    type="continuous">
+    <origin
+      xyz="0.062553 0.062977 0.0355"
+      rpy="1.5708 0 0.7854" />
+    <parent
+      link="base_link" />
+    <child
+      link="coxa_lt" />
+    <axis
+      xyz="0 1 0" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="femur_lt">
+    <inertial>
+      <origin
+        xyz="0.0300000000000001 -4.00077503040497E-06 0.01775"
+        rpy="0 0 0" />
+      <mass
+        value="0.0087586509816886" />
+      <inertia
+        ixx="2.35107438626411E-07"
+        ixy="5.22778147133513E-22"
+        ixz="-3.1996158667403E-09"
+        iyy="1.10345188527737E-06"
+        iyz="-4.49986253228847E-22"
+        izz="1.32562067354555E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://laracna/meshes/femur_lt.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://laracna/meshes/femur_lt.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="femur_lt_j"
+    type="continuous">
+    <origin
+      xyz="0.03814 -0.0126 -0.02153"
+      rpy="0.0016676 0.0016676 0.7854" />
+    <parent
+      link="coxa_lt" />
+    <child
+      link="femur_lt" />
+    <axis
+      xyz="0 0 -1" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="tibia_lt">
+    <inertial>
+      <origin
+        xyz="0.0253797905900474 0.00775572324591811 -0.0209014190388057"
+        rpy="0 0 0" />
+      <mass
+        value="0.0244656402037705" />
+      <inertia
+        ixx="2.23538745051556E-06"
+        ixy="3.40903745188252E-06"
+        ixz="2.67773943210154E-08"
+        iyy="1.84244224176969E-05"
+        iyz="-1.73318065631687E-08"
+        izz="1.9115318342822E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://laracna/meshes/tibia_lt.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://laracna/meshes/tibia_lt.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="tibia_lt_j"
+    type="continuous">
+    <origin
+      xyz="0.06 0 0.0355"
+      rpy="0 0 -1.8112" />
+    <parent
+      link="femur_lt" />
+    <child
+      link="tibia_lt" />
+    <axis
+      xyz="0 0 1" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="coxa_rt">
+    <inertial>
+      <origin
+        xyz="0.0311676418899572 -0.0171857800823059 -0.000875524395071665"
+        rpy="0 0 0" />
+      <mass
+        value="0.0168835876489626" />
+      <inertia
+        ixx="1.6952188219386E-06"
+        ixy="3.83287227161071E-09"
+        ixz="-1.68767618013712E-08"
+        iyy="1.4858149033159E-06"
+        iyz="2.6793634129095E-08"
+        izz="1.77877429034646E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://laracna/meshes/coxa_rt.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://laracna/meshes/coxa_rt.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="coxa_rt_j"
+    type="continuous">
+    <origin
+      xyz="0.062977 -0.062553 0.0355"
+      rpy="1.5708 0 -0.7854" />
+    <parent
+      link="base_link" />
+    <child
+      link="coxa_rt" />
+    <axis
+      xyz="0 1 0" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="femur_rt">
+    <inertial>
+      <origin
+        xyz="0.0300000000000002 -4.00077503043272E-06 0.0177500000000002"
+        rpy="0 0 0" />
+      <mass
+        value="0.00875865098168861" />
+      <inertia
+        ixx="2.35107438626411E-07"
+        ixy="3.11019910319938E-22"
+        ixz="-3.19961586674053E-09"
+        iyy="1.10345188527737E-06"
+        iyz="-5.29395592033938E-23"
+        izz="1.32562067354555E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://laracna/meshes/femur_rt.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://laracna/meshes/femur_rt.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="femur_rt_j"
+    type="continuous">
+    <origin
+      xyz="0.03814 -0.0126 -0.02153"
+      rpy="0.0016676 0.0016676 0.7854" />
+    <parent
+      link="coxa_rt" />
+    <child
+      link="femur_rt" />
+    <axis
+      xyz="0 0 -1" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="tibia_rt">
+    <inertial>
+      <origin
+        xyz="0.0253787836129874 0.00775552687574976 -0.0209014202651868"
+        rpy="0 0 0" />
+      <mass
+        value="0.0244656378567027" />
+      <inertia
+        ixx="2.23600314527494E-06"
+        ixy="3.40756508842589E-06"
+        ixz="2.67778945081145E-08"
+        iyy="1.84237940567903E-05"
+        iyz="-1.73325418847547E-08"
+        izz="1.91153058367525E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://laracna/meshes/tibia_rt.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 1 0.4" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://laracna/meshes/tibia_rt.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="tibia_rt_j"
+    type="continuous">
+    <origin
+      xyz="0.06 0 0.0355"
+      rpy="0 0 -1.7368" />
+    <parent
+      link="femur_rt" />
+    <child
+      link="tibia_rt" />
+    <axis
+      xyz="0 0 1" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="coxa_lb">
+    <inertial>
+      <origin
+        xyz="0.0311676418899572 -0.0171857800823059 -0.000875524395071652"
+        rpy="0 0 0" />
+      <mass
+        value="0.0168835876489626" />
+      <inertia
+        ixx="1.6952188219386E-06"
+        ixy="3.83287227161071E-09"
+        ixz="-1.68767618013713E-08"
+        iyy="1.48581490331589E-06"
+        iyz="2.67936341290954E-08"
+        izz="1.77877429034646E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://laracna/meshes/coxa_lb.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://laracna/meshes/coxa_lb.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="coxa_lb_j"
+    type="continuous">
+    <origin
+      xyz="-0.062977 0.062553 0.0355"
+      rpy="1.5708 0 2.3562" />
+    <parent
+      link="base_link" />
+    <child
+      link="coxa_lb" />
+    <axis
+      xyz="0 1 0" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="femur_lb">
+    <inertial>
+      <origin
+        xyz="0.0300000000000009 -4.00077502987761E-06 0.0177499999999991"
+        rpy="0 0 0" />
+      <mass
+        value="0.00875865098168862" />
+      <inertia
+        ixx="2.35107438626411E-07"
+        ixy="-3.63959469523332E-22"
+        ixz="-3.19961586674029E-09"
+        iyy="1.10345188527737E-06"
+        iyz="-2.64697796016969E-23"
+        izz="1.32562067354555E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://laracna/meshes/femur_lb.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://laracna/meshes/femur_lb.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="femur_lb_j"
+    type="continuous">
+    <origin
+      xyz="0.03814 -0.0126 -0.02153"
+      rpy="0.0016676 0.0016676 0.7854" />
+    <parent
+      link="coxa_lb" />
+    <child
+      link="femur_lb" />
+    <axis
+      xyz="0 0 -1" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="tibia_lb">
+    <inertial>
+      <origin
+        xyz="0.0253809510265003 0.00775604947350703 -0.0209014173200577"
+        rpy="0 0 0" />
+      <mass
+        value="0.0244656348900627" />
+      <inertia
+        ixx="2.23438595150403E-06"
+        ixy="3.41065896314887E-06"
+        ixz="2.67772313327167E-08"
+        iyy="1.84254199029738E-05"
+        iyz="-1.73318879537337E-08"
+        izz="1.91153142596913E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://laracna/meshes/tibia_lb.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://laracna/meshes/tibia_lb.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="tibia_lb_j"
+    type="continuous">
+    <origin
+      xyz="0.06 0 0.0355"
+      rpy="0 0 -1.9" />
+    <parent
+      link="femur_lb" />
+    <child
+      link="tibia_lb" />
+    <axis
+      xyz="0 0 1" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="coxa_rb">
+    <inertial>
+      <origin
+        xyz="0.0311676418899572 -0.0171857800823059 -0.000875524395071652"
+        rpy="0 0 0" />
+      <mass
+        value="0.0168835876489626" />
+      <inertia
+        ixx="1.6952188219386E-06"
+        ixy="3.83287227161093E-09"
+        ixz="-1.68767618013714E-08"
+        iyy="1.48581490331589E-06"
+        iyz="2.67936341290951E-08"
+        izz="1.77877429034646E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://laracna/meshes/coxa_rb.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://laracna/meshes/coxa_rb.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="coxa_rb_j"
+    type="continuous">
+    <origin
+      xyz="-0.062553 -0.062977 0.0355"
+      rpy="1.5708 0 -2.3562" />
+    <parent
+      link="base_link" />
+    <child
+      link="coxa_rb" />
+    <axis
+      xyz="0 1 0" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="femur_rb">
+    <inertial>
+      <origin
+        xyz="0.0300000000000003 -4.00077503072416E-06 0.0177499999999999"
+        rpy="0 0 0" />
+      <mass
+        value="0.00875865098168859" />
+      <inertia
+        ixx="2.35107438626411E-07"
+        ixy="4.83073477730968E-22"
+        ixz="-3.19961586674027E-09"
+        iyy="1.10345188527737E-06"
+        iyz="-1.32348898008484E-22"
+        izz="1.32562067354555E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://laracna/meshes/femur_rb.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://laracna/meshes/femur_rb.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="femur_rb_j"
+    type="continuous">
+    <origin
+      xyz="0.03814 -0.0126 -0.02153"
+      rpy="0.0016676 0.0016676 0.7854" />
+    <parent
+      link="coxa_rb" />
+    <child
+      link="femur_rb" />
+    <axis
+      xyz="0 0 -1" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="tibia_rb">
+    <inertial>
+      <origin
+        xyz="0.0253791910136747 0.00775560067495526 -0.0209014204080387"
+        rpy="0 0 0" />
+      <mass
+        value="0.0244656334997108" />
+      <inertia
+        ixx="2.23577183458242E-06"
+        ixy="3.40819736904078E-06"
+        ixz="2.67799753253576E-08"
+        iyy="1.84240414657196E-05"
+        iyz="-1.73326651729735E-08"
+        izz="1.91153218769417E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://laracna/meshes/tibia_rb.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 1 0.4" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://laracna/meshes/tibia_rb.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="tibia_rb_j"
+    type="continuous">
+    <origin
+      xyz="0.06 0 0.0355"
+      rpy="0 0 -1.7681" />
+    <parent
+      link="femur_rb" />
+    <child
+      link="tibia_rb" />
+    <axis
+      xyz="0 0 1" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+</robot>
