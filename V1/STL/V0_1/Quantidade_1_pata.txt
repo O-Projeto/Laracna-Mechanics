@@ -1,0 +1,8 @@
+Coxa V0 = 1
+Coxa Bar V0 = 3
+Coxa Bar 2 V0 = 3
+Femur V0 = 2
+Femur bar mont = 2
+Axis coxa bar = 3
+Tibia = 1
+
